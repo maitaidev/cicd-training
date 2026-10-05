@@ -1,3 +1,2 @@
 def greet(name):
-    message = "Good morning, " + name + "!"
-    return message
+    return "Good morning, " + name
