@@ -1,2 +1,2 @@
 def greet(name):
-    return "Good morning, " + name
+    return "Welcome, " + name
