@@ -11,5 +11,6 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-              with:
-                  path: feature/ci-setup/app.py
+
+            - name: Check code
+              run: python -m py_compile app.py
