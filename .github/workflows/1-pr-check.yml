@@ -1,0 +1,15 @@
+name: pr-check
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  path: feature/ci-setup/app.py
