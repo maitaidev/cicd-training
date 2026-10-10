@@ -1,0 +1,18 @@
+name: Code Review
+on:
+    pull_request:
+        branches:
+            - main
+jobs:
+    code-review:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Run Code Review
+              uses: suo/flake8-github-action@releases/v1
+              with:
+                checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
