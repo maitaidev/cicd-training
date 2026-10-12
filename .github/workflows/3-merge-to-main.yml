@@ -1,0 +1,14 @@
+name: 3-merge-to-main
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    merge:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Deploy
+              run: echo "Код в main — деплоим!"
